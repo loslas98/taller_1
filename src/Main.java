@@ -6,8 +6,6 @@ public class Main {
         out1:
         while(true) {
 
-
-
             menu();
             System.out.println("Elija una opcion : ");
             Scanner sc = new Scanner(System.in);
@@ -19,9 +17,9 @@ public class Main {
                     mostrarBinario(numeroValidado, binario);
                     break;
                 case "2":
-                    int binarioValidado = ingresarBinario();
-                    int conversion = binarioaEntero(binarioValidado, 2);
-                    mostrarDecimal(binarioValidado, conversion);
+                    int binarioValidado = validarBinario();
+                    int decimal = binarioaEntero(binarioValidado, 2);
+                    mostrarDecimal(binarioValidado, decimal);
                     break;
                 case "3":
                     System.out.println("Adios");
@@ -61,7 +59,7 @@ public class Main {
 
     public static int ingresarBinario(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Ingresa un numero binario");
+        System.out.println("Ingresa un numero binario (de 8 bits)");
         int binario = sc.nextInt();
         return binario;
 
