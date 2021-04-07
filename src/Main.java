@@ -20,7 +20,7 @@ public class Main {
                     break;
                 case "2":
                     int binarioValidado = ingresarBinario();
-                    int conversion = cambioBasenA10(binarioValidado, 2);
+                    int conversion = binarioaEntero(binarioValidado, 2);
                     mostrarDecimal(binarioValidado, conversion);
                     break;
                 case "3":
@@ -73,11 +73,11 @@ public class Main {
         do {
 
             try {
-                numero = ingresarNumero();
+                numero = ingresarBinario();
 
             } catch (Exception e) {
                 System.out.println("error, ingrese un numero correcto");
-                ingresarNumero();
+                ingresarBinario();
             }
 
         }while(numero<0||numero>1111111);
@@ -90,6 +90,7 @@ public class Main {
 
 
     public static void menu(){
+        System.out.println("----------Menu--------");
         System.out.println("[1] Mostrar representación binaria");
         System.out.println("[2] Mostrar representación decimal");
         System.out.println("[3] Salir");
@@ -110,14 +111,10 @@ public class Main {
 
 
 
-    public static int cambioBasenA10(int numero,int base){ //base n a base 10
+    public static int binarioaEntero(int numero,int base){ //base n a base 10
         return  Integer.parseInt(String.valueOf(numero),base);
-    }//base n a base 10
-
-    public static String cambioBase10(int numero,int base){ //base 10 a otra base
-        return Integer.toString(numero,base);
-
     }
+
 
 
     public static void mostrarDecimal(int numero,  int conversion){
