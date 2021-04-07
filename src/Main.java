@@ -40,7 +40,6 @@ public class Main {
     }
 
     public static int validarNumero(){
-        Scanner sc = new Scanner(System.in);
         int numero = 0;
         do {
 
@@ -66,7 +65,6 @@ public class Main {
     }
 
     public static int validarBinario(){
-        Scanner sc = new Scanner(System.in);
         int numero = 0;
         do {
 
